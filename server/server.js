@@ -8,14 +8,14 @@ app.use(cors());
 app.use(express.json());
 app.use(require("./routes/record"));
 
-//driver connection
+
 const dbo = require('./db/conn');
 
 app.listen(port, () => {
-    //behavior
+
     dbo.connectToServer(function (err) {
         if (err) console.log(err);
     })
-
+    
     console.log(`Server listening at port : ${port}`);
 })
