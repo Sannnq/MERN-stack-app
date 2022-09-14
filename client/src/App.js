@@ -2,9 +2,9 @@ import './App.css';
 
 function App() {
   return (
-    <>
-    <h1>MERN Stack app</h1>
-    </>
+    <div className="App">
+    <h1>MERN stack app</h1>
+    </div>
   );
 }
 
