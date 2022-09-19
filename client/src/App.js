@@ -1,4 +1,5 @@
 import './App.css';
+import Navbar from './components/Navbar/Navbar';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 function App() {
@@ -18,11 +19,12 @@ function App() {
   console.log(typeof (datas))
   return (
     <div className="App">
+      <Navbar />
       <h1>MERN stack app</h1>
       <div>
         {
           res.map((e) => {
-            return <div>
+            return <div key={e._id}>
               <p>id: {e._id}</p>
               <p>id: {e.name}</p>
             </div>
